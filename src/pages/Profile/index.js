@@ -42,8 +42,8 @@ export default function Profile() {
     }
   }
 
-  async function handleUpdateIncident() {
-    history.push("/incidents/new");
+  async function handleUpdateIncident(incident) {
+    history.push("/incidents/edit", incident);
   }
 
   function handleLogout() {
@@ -87,7 +87,7 @@ export default function Profile() {
 
             <button
               className="-update"
-              onClick={() => handleUpdateIncident()}
+              onClick={() => handleUpdateIncident(incident)}
               type="button"
             >
               <FiEdit size={20} color="#DAA520" />
